@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 from pubsub import pub
 from space_weather_service.controller import Controller
-from space_weather_service.forms import ConfigForm
+#from space_weather_service.forms import ConfigForm
 
 
 space_weather_service = Flask(__name__)
