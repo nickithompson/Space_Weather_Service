@@ -1,0 +1,2 @@
+from space_weather_service import space_weather_service
+space_weather_service.run(debug=True)
