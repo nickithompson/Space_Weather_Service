@@ -34,4 +34,8 @@ Features
 
 
 * Parses NOAA GOES electron flux forecast
-* Doesn't do anything with it yet! :)
+* (email) WARNING: >10MeV levels at > 1 pfu
+* (email, API) ALERT: >10MeV levels at > 10 pfu
+* (email, API) CRITICAL: >10MeV levels at > 100 pfu
+* (email, API) INFO: >10MeV levels below < 1 pfu for 90 minutes (since last info)
+* Email includes basic plot of 90 minute flux history

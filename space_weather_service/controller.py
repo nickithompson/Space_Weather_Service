@@ -1,7 +1,7 @@
 from pubsub import pub
 from space_weather_service.model import Model
 # from space_weather_service.api import Caller
-# from space_weather_service.email import Mailer
+from space_weather_service.email import Mailer
 
 from threading import Timer
 import requests
@@ -13,7 +13,7 @@ class Controller:
         self.model = Model()
         self.tracker = Tracker()
         # self.CallView = Caller()
-        # self.MailView = Mailer()
+        self.MailView = Mailer()
         pub.subscribe(self.notifyViews, "new_levels")
         pub.subscribe(self.updateConfig, "new_config")
 
@@ -52,7 +52,7 @@ class Controller:
     def updateConfig(self, info):
         email, endpoint = info
 #        self.CallView.endURL = endpoint
-#        self.MailView.addr = email
+        self.MailView.addr = email
 
 class Tracker:
 
