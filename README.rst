@@ -34,4 +34,5 @@ Features
 
 
 * Parses NOAA GOES electron flux forecast
-* Doesn't do anything with it yet! :)
+* app branch: deploy Flask web service
+* email branch: format and send alert emails
